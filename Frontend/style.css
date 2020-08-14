@@ -11,6 +11,15 @@ button {
     border: none;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
 h2 {
     margin: 0;
 }
@@ -39,6 +48,30 @@ header .hamburger-menu {
 
 header .hamburger-menu:hover {
     cursor: pointer;
+}
+
+header .hamburger {
+    background-color: #3c6e71;
+    width: 0%;
+    position: absolute;
+    top: 76px;
+    right: 0;
+    height: 88vh;
+    left: 100%;
+    transition: left 0.5s ease-in-out, width 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+header li {
+    margin-top: 20px;
+}
+
+header ul {
+    padding: 15px;
+}
+
+header a:hover {
+    color: #d9d9d9;
 }
 
 
