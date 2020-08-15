@@ -134,6 +134,79 @@ header a:hover {
     color: #d9d9d9;
 }
 
+/* Link register */
+.link-register {
+    background-color: #3c6e71;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.link-register button {
+    background-color: #353535;
+    padding: 10px;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.link-register button:hover {
+    background-color: darkslategrey;
+    cursor: pointer;
+}
+
+/* Register */
+.register {
+    background-color: #3c6e71;
+    color: white;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.register label {
+    margin-bottom: 10px;
+}
+
+.register h3 {
+    margin-bottom: 20px;
+}
+
+.register input {
+    padding: 10px 5px;
+    outline: none;
+    background-color: #353535;
+    border: none;
+    color: white;
+}
+
+.register button {
+    background-color: #353535;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register button:hover {
+    background-color: darkslategrey;
+    cursor: pointer;
+}
 
 
 
@@ -176,12 +249,22 @@ header a:hover {
         padding: 200px;
     }
 
+    /* Register */
+    .form-flex {
+        display: flex;
+    }
+
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
     /* Info */
     .info {
         display: flex;
+    }
+
+    /* register */
+    .register {
+        width: 50%;
     }
 }
 
