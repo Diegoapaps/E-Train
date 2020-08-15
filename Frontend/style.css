@@ -6,6 +6,8 @@ body {
     line-height: 1.5;
 }
 
+/* global*/
+
 button {
     outline: none;
     border: none;
@@ -23,6 +25,8 @@ li {
 h2 {
     margin: 0;
 }
+
+/* header*/
 
 header {
     display: flex;
@@ -56,10 +60,11 @@ header .hamburger {
     position: absolute;
     top: 76px;
     right: 0;
-    height: 88vh;
+    height: 100%;
     left: 100%;
     transition: left 0.5s ease-in-out, width 0.5s ease-in-out;
     overflow: hidden;
+    z-index: 2;
 }
 
 header li {
@@ -74,6 +79,109 @@ header a:hover {
     color: #d9d9d9;
 }
 
+.navbar {
+    display: none;
+}
+
+/* showcase*/
+
+.showcase {
+    background-image: url('./Img/showcase.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 35px;
+}
+
+.showcase h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.showcase .showcase-title {
+    background-color: #3c6e71;
+    padding: 20px;
+    width: 30%;
+    color: white;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.overlay {
+    background-color: #d9d9d9;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    overflow: hidden;
+    top: 76px;
+}
+
+/* info */
+.info  div {
+    background-color: #353535;
+    margin-right: 30px;
+    margin-left: 30px;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.info p {
+    color: #d9d9d9;
+}
 
 
+
+
+/* Media Queries */
+@media (min-width: 600px) {
+
+    /* navabar */
+    .navbar {
+        display: flex;
+        width: 80%;
+        margin: 0;
+    }
+
+    .navbar ul {
+        display: flex;
+        margin: 0;
+    }
+
+    .navbar .login {
+        margin-left: auto;
+        color: black;
+    }
+    
+    .navbar li {
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    header .hamburger-menu {
+        display: none;
+    }
+
+    header h2 {
+        margin-top: 8px;
+        margin-right: 20px;
+    }
+
+    /* showcase */
+    .showcase {
+        padding: 200px;
+    }
+
+}
+
+@media (min-width: 700px) {
+    /* Info */
+    .info {
+        display: flex;
+    }
+}
 
