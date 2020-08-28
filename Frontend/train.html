@@ -40,30 +40,54 @@
     <main>
         <div class="user-navbar">
             <a href="./train.html" class="current">Entrenar</a>
-            <a href="#">Rutinas</a>
             <a href="#">Ejercicios</a>
             <a href="#">Historial</a>
         </div>
         <div class="fast-train">
             <h2>Entrenamiento Rápido</h2>
             <p>Para comenzar un entrenamiento rápido haz click en el botón de abajo</p>
-            <button id="fast-train-button">Iniciar entrenamiento rápido</button>
+            <button id="fast-train-button" class="blue-style-btn">Iniciar entrenamiento rápido</button>
         </div>
         <div class="fast-train-component">
             <div class="fast-train-headers">
                 <h3>Entrenamiento</h3>
-                <button id="fast-train-cancel">Cancelar</button>
+                <button id="fast-train-cancel" class="cancel-btn">Cancelar</button>
             </div>
             <div class="fast-train-excercises">
 
             </div>
             <div class="fast-train-btns">
-                <button id="add-fast-train-excercise">Añadir ejercicio</button>
-                <button>Terminar entrenamiento</button>
+                <button id="add-fast-train-excercise" class="button-blue-width-style">Añadir ejercicio</button>
+                <button class="button-blue-width-style">Terminar entrenamiento</button>
             </div>
+        </div>
+
+        <div class="rutinas">
+            <div class="overlay"></div>
+            <div class="routines-modal">
+                <div class="routines-modal-header">
+                    <button id="cancel-routine-creator" class="delete-set">X</button>
+                    <button id="create-routine-btn-modal" class="blue-style-btn">Crear</button>
+                </div>
+                <form>
+                    <input id="routine-name" type="text" placeholder="Nombre de la rutina">
+                </form>
+                <div class="modal-excercises">
+
+                </div>
+                <button id="add-excercise-routine-creator" class="button-blue-width-style">Añadir Ejercicios</button>
+            </div>
+            <div class="rutinas-header">
+                <h2>Rutinas</h2>
+                <button id="create-routine-btn" class="blue-style-btn">Crear Rutina</button>
+            </div>
+            <h4>Mis rutinas</h4>
+            <p>Aún no tienes rutinas pulsa en crear rutina para hacer una nueva o entrena con alguna de las
+                predeterminadas</p>
         </div>
     </main>
 </body>
-<script src="./app.js"></script>
+<script type="module" src="./fastTrain.js"></script>
+<script type="module" src="./modal.js"></script>
 
 </html>

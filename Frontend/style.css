@@ -108,7 +108,7 @@ header a:hover {
 }
 
 .overlay {
-    background-color: #d9d9d9;
+    background-color: darkslategrey;
     opacity: 0.5;
     height: 100%;
     width: 100%;
@@ -245,14 +245,14 @@ header a:hover {
     margin-right: auto;
 }
 
-.fast-train button {
+.blue-style-btn {
     background-color: #3c6e71;
     border-radius: 5px;
     padding: 10px;
     color: white;
 }
 
-.fast-train button:hover {
+.blue-style-btn:hover {
     background-color: lightseagreen;
     cursor: pointer;
 }
@@ -272,7 +272,7 @@ header a:hover {
 
 
 
-.fast-train-component #fast-train-cancel {
+.cancel-btn {
     background-color: red;
     padding: 5px;
     border-radius: 5px;
@@ -280,7 +280,7 @@ header a:hover {
     margin-left: auto;
 }
 
-.fast-train-component #fast-train-cancel:hover {
+.cancel-btn:hover {
     background-color: tomato;
     cursor: pointer;
 }
@@ -293,7 +293,7 @@ header a:hover {
     display: flex;
     flex-direction: column;
 }
-.fast-train-btns button {
+.button-blue-width-style {
     margin-top: 20px;
     width: 50%;
     margin-left: auto;
@@ -304,7 +304,7 @@ header a:hover {
     color: white;
 }
 
-.fast-train-btns button:hover {
+.button-blue-width-style:hover {
     cursor: pointer;
     background-color: darkslategray;
 }
@@ -319,11 +319,12 @@ header a:hover {
     gap: 10px;
 }
 
-.fast-train-component h4 {
+.fast-train-component h4, .modal-excercises h4 {
     text-align: center;
+    color: white;
 }
 
-.fast-train-component input {
+.fast-train-component input, .modal-excercises input {
     background-color: #d9d9d9;
     color: black;
     outline: none;
@@ -335,7 +336,7 @@ header a:hover {
     text-align: center;
 }
 
-.fast-train-component span {
+.fast-train-component span, .modal-excercises span {
     background-color: #d9d9d9;
     color: darkslategray;
     font-weight: bold;
@@ -366,6 +367,23 @@ header a:hover {
     background-color: darkslategray;
 }
 
+.dlt-excercise-btn {
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+    background-color: #353535;
+    font-weight: bold;
+    color: white;
+    width: 50%;
+    border-radius: 5px;
+    height: 35%;
+    margin-top: 53px;
+}
+
+.dlt-excercise-btn:hover {
+    cursor: pointer;
+    background-color: darkslategray;
+}
+
 .delete-set {
     background-color: lightgray;
     color: darkslategrey;
@@ -380,6 +398,73 @@ header a:hover {
 .delete-set:hover {
     background-color: lightseagreen;
     cursor: pointer;
+}
+
+/* Rutinas */
+.rutinas {
+    margin-top: 50px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cancel-routine-creator {
+    width: 15%;
+    margin-right: auto;
+    background-color: #3c6e71;
+    color: white;
+    background-color: red;
+}
+
+#cancel-routine-creator:hover {
+    background-color: tomato;
+}
+
+#create-routine-btn-modal {
+    margin-left: 60%;
+    background-color: #353535;
+}
+
+.rutinas-header {
+    display: flex;
+}
+
+#add-excercise-routine-creator {
+    width: 100%;
+}
+
+#routine-name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #3c6e71;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    color: white;
+}
+
+.rutinas-header button {
+    margin-left: 30px;
+}
+
+
+.rutinas h4 {
+    margin-top: 30px;
+}
+
+.routines-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 200ms ease-in-out;
+    z-index: 10;
+    background-color: #3c6e71;
+    padding: 30px;
+    border-radius: 10px;
+    height: 500px;
+    overflow-y: auto;
 }
 
 /* Media Queries */
