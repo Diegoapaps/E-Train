@@ -46,6 +46,7 @@ function createHeadersForFastTrain(elt, item) {
     const reps = document.createElement('h4');
     const addSet = document.createElement('button');
     const dltExcercise = document.createElement('button');
+    const excerciseTitle = document.createElement('h3');
     const titles = [sets, anterior, kg, reps, dltExcercise];
 
     const div = document.createElement('div');
@@ -61,10 +62,12 @@ function createHeadersForFastTrain(elt, item) {
     reps.innerHTML = 'Reps';
     addSet.innerHTML = 'Añadir Set';
     addSet.className = 'add-set-btn';
+    excerciseTitle.innerHTML = 'Ejercicio';
 
     deleteExcerciseListener(dltExcercise);
     addSetFunction(addSet);
 
+    elt.appendChild(excerciseTitle);
     titles.forEach(title => appendChildOfArray(title, div));
     elt.appendChild(div);
 
@@ -107,7 +110,7 @@ function createInputsFastTrain(elt, refEl) {
 
 function findSetNumber(elt) {
     const counters = Array.from(elt.parentElement.parentElement.childNodes);
-    const index = counters.indexOf(elt.parentElement);
+    const index = counters.indexOf(elt.parentElement) - 1;
     elt.innerHTML = index;
 
 }
@@ -139,6 +142,49 @@ function deleteExcerciseListener(btn) {
 function deleteExcercise(btn) {
     const elements = Array.from(btn.parentElement.parentElement.childNodes);
     elements.forEach(elt => elt.parentElement.removeChild(elt));
+}
+
+
+// End training
+const endTrainingBtn = document.querySelector('#end-training-btn');
+const confirmFastTrain = document.querySelector('.confirm-fast-train');
+const confirmationOverlay = document.querySelector('.confirmation-overlay');
+
+endTrainingBtn.addEventListener('click', () => {
+    showModal(confirmFastTrain);
+    confirmationOverlay.style.display = 'block';
+});
+
+// Confirm fast train
+import { createRoutine } from './routines.js'
+
+const confirmFastTrainYes = document.querySelector('#confirm-fast-train-yes');
+const confirmFastTrainNo = document.querySelector('#confirm-fast-train-no');
+const fastTrainQuestion = document.querySelector('.fast-train-question');
+const saveFastTrainRoutine = document.querySelector('.save-fast-train-routine');
+const saveFastTrainRoutineBtn = document.querySelector('#save-fast-train-routine-btn');
+const routineName = document.querySelector('#fast-train-routine-name');
+
+confirmFastTrainYes.addEventListener('click', nameFastTrainRoutine);
+confirmFastTrainNo.addEventListener('click', closeFastTrain);
+saveFastTrainRoutineBtn.addEventListener('click', saveFastTrainRoutineToRoutines);
+
+function nameFastTrainRoutine() {
+    fastTrainQuestion.style.display = 'none';
+    saveFastTrainRoutine.style.display = 'block';
+}
+
+function closeFastTrain() {
+    closeModal(confirmFastTrain);
+    closeModal(newTrainingComponent);
+    hideTrainingComponent(excerciseContainer);
+    confirmationOverlay.style.display = 'none';
+}
+
+function saveFastTrainRoutineToRoutines() {
+    createRoutine(routineName, newTrainingComponent, excerciseContainer);
+    closeModal(confirmFastTrain);
+    confirmationOverlay.style.display = 'none';
 }
 
 export {

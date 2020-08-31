@@ -1,14 +1,14 @@
 // Hamburger menu
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const sideMenu = document.querySelector('.hamburger');
-const overlay = document.querySelector('.overlay');
+const overlay = document.querySelector('.overlay-menu');
 let displayed = false;
 
 function addHamburgerListener() {
     hamburgerMenu.addEventListener('click', showMenu);
 }
 
-function showMenu() {
+function showMenu(elt) {
     if (displayed === false) {
         sideMenu.style.left = '65%';
         sideMenu.style.width = '35%';

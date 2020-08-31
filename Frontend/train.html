@@ -9,7 +9,9 @@
 </head>
 
 <body>
-    <div class="overlay"></div>
+    <div class="overlay overlay-style"></div>
+    <div class="overlay-style overlay-menu"></div>
+    <div class="confirmation-overlay overlay-style"></div>
     <header>
         <h2>E-Train</h2>
         <div class="navbar">
@@ -43,22 +45,39 @@
             <a href="#">Ejercicios</a>
             <a href="#">Historial</a>
         </div>
+
         <div class="fast-train">
             <h2>Entrenamiento Rápido</h2>
             <p>Para comenzar un entrenamiento rápido haz click en el botón de abajo</p>
             <button id="fast-train-button" class="blue-style-btn">Iniciar entrenamiento rápido</button>
         </div>
+
         <div class="fast-train-component">
             <div class="fast-train-headers">
                 <h3>Entrenamiento</h3>
                 <button id="fast-train-cancel" class="cancel-btn">Cancelar</button>
             </div>
-            <div class="fast-train-excercises">
-
-            </div>
+            <div class="fast-train-excercises"></div>
             <div class="fast-train-btns">
                 <button id="add-fast-train-excercise" class="button-blue-width-style">Añadir ejercicio</button>
-                <button class="button-blue-width-style">Terminar entrenamiento</button>
+                <button id="end-training-btn" class="button-blue-width-style">Terminar entrenamiento</button>
+            </div>
+        </div>
+
+        <div class="confirm-fast-train">
+            <div class="fast-train-question">
+                <h3>¿Quieres guardar está rutina?</h3>
+                <div class="confirmation-btn-container">
+                    <button id="confirm-fast-train-yes" class="confirmation-btn">Si</button>
+                    <button id="confirm-fast-train-no" class="confirmation-btn">No</button>
+                </div>
+            </div>
+            <div class="save-fast-train-routine">
+                <form>
+                    <input id="fast-train-routine-name" class="name-for-routine" type="text"
+                        placeholder="Nombre de la rutina">
+                </form>
+                <button id="save-fast-train-routine-btn" class="button-blue-width-style">Guardar</button>
             </div>
         </div>
 
@@ -70,11 +89,9 @@
                     <button id="create-routine-btn-modal" class="blue-style-btn">Crear</button>
                 </div>
                 <form>
-                    <input id="routine-name" type="text" placeholder="Nombre de la rutina">
+                    <input id="routine-name" class="name-for-routine" type="text" placeholder="Nombre de la rutina">
                 </form>
-                <div class="modal-excercises">
-
-                </div>
+                <div class="modal-excercises"></div>
                 <button id="add-excercise-routine-creator" class="button-blue-width-style">Añadir Ejercicios</button>
             </div>
             <div class="rutinas-header">
@@ -84,10 +101,27 @@
             <h4>Mis rutinas</h4>
             <p>Aún no tienes rutinas pulsa en crear rutina para hacer una nueva o entrena con alguna de las
                 predeterminadas</p>
+
+            <div class="routine-container">
+
+            </div>
+
+            <div class="open-routine">
+                <div class="routine-train-headers">
+                    <h3 id="routine-title">Nombre de la Rutina</h3>
+                    <button id="routine-train-cancel" class="cancel-btn">Cancelar</button>
+                </div>
+                <div class="fast-train-excercises"></div>
+                <div class="routine-train-btns">
+                    <button class="button-blue-width-style">Terminar entrenamiento</button>
+                </div>
+            </div>
+
         </div>
     </main>
 </body>
 <script type="module" src="./fastTrain.js"></script>
 <script type="module" src="./routineCreator.js"></script>
+<script type="module" src="./routines.js"></script>
 
 </html>

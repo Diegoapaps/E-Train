@@ -30,6 +30,25 @@ h3 {
     color: white;
 }
 
+.overlay-style {
+    background-color: darkslategrey;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    overflow: hidden;
+}
+
+.overlay-menu {
+    top: 76px;
+}
+
+.confirmation-overlay {
+    z-index: 12;
+}
+
 /* header*/
 
 header {
@@ -111,17 +130,6 @@ header a:hover {
     margin-left: auto;
 }
 
-.overlay {
-    background-color: darkslategrey;
-    opacity: 0.5;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    display: none;
-    overflow: hidden;
-    top: 76px;
-}
 
 /* info */
 .info  div {
@@ -383,13 +391,13 @@ header a:hover {
 }
 
 
-.fast-train-btns {
+.fast-train-btns, .routine-train-btns {
     display: flex;
     flex-direction: column;
 }
 
 
-.fast-train-headers {
+.fast-train-headers, .routine-train-headers {
     display: flex;
 }
 
@@ -402,7 +410,57 @@ header a:hover {
     color: white;
 }
 
-/* Rutinas */
+/* Confirmación de entrenamiento rápido */
+.confirm-fast-train {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 200ms ease-in-out;
+    z-index: 15;
+    background-color: #3c6e71;
+    padding: 30px;
+    border-radius: 10px;
+    height: 200px;
+}
+
+
+.name-for-routine {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: #3c6e71;
+    border: none;
+    font-size: 1.4rem;
+    outline: none;
+    color: white;
+}
+
+.confirmation-btn {
+    background-color: #353535;
+    border-radius: 5px;
+    padding: 15px;
+    color: white;
+    margin-right: 20px;
+}
+
+.confirmation-btn:hover {
+    cursor: pointer;
+    background-color: darkslategrey;
+}
+
+.confirmation-btn-container {
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
+
+.save-fast-train-routine {
+    display: none;
+}
+
+/* Crear Rutinas */
 .rutinas {
     margin-top: 50px;
     width: 85%;
@@ -439,16 +497,6 @@ header a:hover {
     width: 100%;
 }
 
-#routine-name {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #3c6e71;
-    border: none;
-    font-size: 1.2rem;
-    outline: none;
-    color: white;
-}
-
 .rutinas-header button {
     margin-left: 30px;
 }
@@ -458,7 +506,7 @@ header a:hover {
     margin-top: 30px;
 }
 
-.routines-modal, .fast-train-component {
+.routines-modal, .fast-train-component, .open-routine {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -473,7 +521,40 @@ header a:hover {
     overflow-y: auto;
 }
 
+/* Rutinas */
+.routine-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 
+.routine-container div {
+    background-color: lightgray;
+    width: 70%;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.routine-container h4 {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.routine-container div button {
+    width: 100%;
+}
+
+.routine-container ul {
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.routine-container li {
+    list-style: disc;
+}
+
+/* Routine trainer */
 
 
 /* Media Queries */
