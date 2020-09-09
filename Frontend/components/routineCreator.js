@@ -56,3 +56,4 @@ import {
 } from './fastTrain.js';
 
 export { showModal, closeModal, hideTrainingComponent };
+

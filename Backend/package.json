@@ -7,5 +7,11 @@
     "start": "nodemon index.js"
   },
   "author": "Diego Abdo",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.3"
+  }
 }
