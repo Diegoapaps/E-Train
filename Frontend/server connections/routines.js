@@ -2,7 +2,7 @@
 // Server URL
 const url = `http://localhost:3000/tracker/routines`;
 
-import { displayRoutines } from '../components/routines.js';
+import { displayRoutines, routinePreview } from '../components/routines.js';
 
 // get al routines fro the server
 function getAllRoutines() {
@@ -14,11 +14,8 @@ function getAllRoutines() {
             console.log(json.data);
 
             for (let i = 0; i < json.data.length; i++) {
-                displayRoutines(json.data[i].name);
+                displayRoutines(json.data[i]);
                 createData(json.data[i]);
-            }
-            for (let i = json.data.length - 1; i > 0; i--) {
-                const excercises = JSON.parse(json.data[i].excercises);
             }
         })
         .catch(err => {

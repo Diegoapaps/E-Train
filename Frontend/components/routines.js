@@ -46,7 +46,7 @@ function createRoutine(input, modalClosed, componentClosed) {
     // create routine for the server
     const routine = new Routine(input.value, JSON.stringify(serverExcercises));
     createRoutineServer(routine);
-    displayRoutines(input.value, componentClosed);
+    displayRoutines();
 
     // hide components
     closeModal(modalClosed);
@@ -63,22 +63,6 @@ function createTrainBtn(container) {
         openRoutine(trainBtn);
     });
     container.appendChild(trainBtn);
-}
-
-// create the routine preview
-function routinePreview(container, array) {
-    const ul = document.createElement('ul');
-    const items = Array.from(array.childNodes);
-
-    for (let i = 0; i < 3; i++) {
-        const li = document.createElement('li');
-        if (items[i] !== undefined) {
-            li.innerHTML = items[i].firstChild.innerHTML;
-            ul.appendChild(li);
-        }
-    }
-
-    container.appendChild(ul);
 }
 
 // Open routine
@@ -98,15 +82,34 @@ cancelRoutineTrainer.addEventListener('click', () => {
 });
 
 // for each routine create the DOM element
-function displayRoutines(item) {
+function displayRoutines(block) {
     const div = document.createElement('div');
     const routineTitle = document.createElement('h4');
 
-    routineTitle.innerHTML = item;
+    routineTitle.innerHTML = block.name;
 
     div.appendChild(routineTitle);
+
+    if (block.excercises !== undefined) {
+        const excercisesArray = JSON.parse(block.excercises);
+        routinePreview(excercisesArray, div);
+    }
+
     createTrainBtn(div);
     routineContainer.appendChild(div);
+}
+
+// preview
+function routinePreview(arr, container) {
+    const ul = document.createElement('ul');
+
+    for (let i = 0; i < arr.length; i++) {
+        const li = document.createElement('li');
+        li.innerHTML = arr[i].name;
+        ul.appendChild(li);
+    }
+
+    container.appendChild(ul);
 }
 
 // Display routines from the server
@@ -120,4 +123,4 @@ import {
 getAllRoutines();
 
 // exports
-export { createRoutine, displayRoutines };
+export { createRoutine, displayRoutines, routinePreview };
