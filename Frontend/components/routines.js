@@ -43,10 +43,20 @@ function createRoutine(input, modalClosed, componentClosed) {
         serverExcercises.push(excercise);
     });
 
+    // create object for displaying routine excercises
+    const excerciseObjects = [];
+
+    excerciseContainers.forEach(excer => {
+        const obj = {};
+        obj.name = excer.firstChild.innerHTML;
+        excerciseObjects.push(obj);
+    });
+
+
     // create routine for the server
     const routine = new Routine(input.value, JSON.stringify(serverExcercises));
     createRoutineServer(routine);
-    displayRoutines();
+    displayCreatedRoutine(excerciseObjects, input);
 
     // hide components
     closeModal(modalClosed);
@@ -110,6 +120,19 @@ function routinePreview(arr, container) {
     }
 
     container.appendChild(ul);
+}
+
+// display routine when created
+function displayCreatedRoutine(arr, input) {
+    const div = document.createElement('div');
+    const routineHeader = document.createElement('h4');
+
+    routineHeader.innerHTML = input.value;
+    div.appendChild(routineHeader);
+    routinePreview(arr, div);
+    createTrainBtn(div);
+
+    routineContainer.appendChild(div);
 }
 
 // Display routines from the server

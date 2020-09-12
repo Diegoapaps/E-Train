@@ -23,12 +23,14 @@ app.use(function (req, res, next) {
 
 // route files
 const routines = require('./routes/routines');
+const excercises = require('./routes/excercices');
 
 // body parser
 app.use(express.json());
 
 // mount router
 app.use('/tracker/routines', routines);
+app.use('/tracker/excercises', excercises);
 
 app.use(errorHandler);
 
