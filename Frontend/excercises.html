@@ -46,7 +46,31 @@
         <a href="./excercises.html" class="current">Ejercicios</a>
         <a href="#">Historial</a>
     </div>
+
+    <div class="exercises">
+        <div class="search">
+            <h2>Ejercicios</h2>
+            <form>
+                <input id="search-exercise" type="text" placeholder="Buscar...">
+            </form>
+            <select id="select-exercise">
+                <option selected>Músculo</option>
+                <option>Pecho</option>
+                <option>Espalda</option>
+                <option>Bíceps</option>
+                <option>Tríceps</option>
+                <option>Hombro</option>
+                <option>Abs</option>
+                <option>Glúteos</option>
+                <option>Quads</option>
+                <option>Pantorrilla</option>
+                <option>Femoral</option>
+            </select>
+        </div>
+        <div class="exercise-list"></div>
+    </div>
 </main>
 <script type="module" src="./app.js"></script>
+<script type="module" src="./components/exercises.js"></script>
 
 </html>

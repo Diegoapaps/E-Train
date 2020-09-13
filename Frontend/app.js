@@ -1,4 +1,4 @@
-import { showMenu, addHamburgerListener } from './hamburgerMenu.js';
+import { showMenu, addHamburgerListener } from './components/hamburgerMenu.js';
 
 addHamburgerListener();
 

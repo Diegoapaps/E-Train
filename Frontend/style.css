@@ -556,7 +556,63 @@ header a:hover {
     list-style: disc;
 }
 
-/* Routine trainer */
+/* Ejercicios */
+
+.exercises-block {
+    background-color: #353535;
+    color: white;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.exercises-block h3 {
+    margin-bottom: 10px;
+}
+
+.search {
+    display: flex;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search input {
+    background-color: lightgray;
+    border: none;
+    outline: none;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.search select {
+    margin-left: 20px;
+    outline: none;
+    border: none;
+    background-color: lightgray;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: darkslategray;
+}
+
+.search option {
+    color: darkslategray;
+}
+
+.muscle-span {
+    background-color: lightgray;
+    color: darkslategray;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
 
 
 /* Media Queries */

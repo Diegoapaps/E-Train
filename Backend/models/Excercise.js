@@ -10,16 +10,16 @@ const ExcerciseSchema = mongoose.Schema({
         type: [String],
         required: true,
         enum: [
-            'Chest',
-            'Triceps',
-            'Shoulders',
-            'Biceps',
-            'Back',
+            'Pecho',
+            'Tríceps',
+            'Hombros',
+            'Bíceps',
+            'Espalda',
             'Quads',
-            'Hamstrings',
-            'Calves',
+            'Femoral',
+            'Pantorilla',
             'Abs',
-            'Glutes'
+            'Glúteos'
         ]
     }
 });

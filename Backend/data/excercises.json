@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Press Banca",
+        "muscles": [
+            "Pecho",
+            "Tríceps",
+            "Hombros"
+        ]
+    },
+    {
+        "name": "Dominadas",
+        "muscles": [
+            "Espalda",
+            "Bíceps"
+        ]
+    },
+    {
+        "name": "Sentadilla",
+        "muscles": [
+            "Glúteos",
+            "Quads"
+        ]
+    }
+]
