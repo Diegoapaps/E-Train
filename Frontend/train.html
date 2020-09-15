@@ -118,11 +118,39 @@
             </div>
 
         </div>
+
+        <div class="select-exercise">
+            <div class="select-exercise-header">
+                <h3>Seleccionar Ejercicios</h3>
+                <button id="cancel-exercise-selector" class="cancel-btn">Cancelar</button>
+            </div>
+            <div class="search">
+                <form>
+                    <input id="search-exercise" type="text" placeholder="Buscar...">
+                </form>
+                <select id="select-exercise">
+                    <option selected>Todos</option>
+                    <option>Pecho</option>
+                    <option>Espalda</option>
+                    <option>Bíceps</option>
+                    <option>Tríceps</option>
+                    <option>Hombro</option>
+                    <option>Abs</option>
+                    <option>Glúteos</option>
+                    <option>Quads</option>
+                    <option>Pantorrilla</option>
+                    <option>Femoral</option>
+                </select>
+            </div>
+            <div class="exercise-select-list"></div>
+        </div>
     </main>
 </body>
 <script type="module" src="./components/fastTrain.js"></script>
 <script type="module" src="./components/routineCreator.js"></script>
 <script type="module" src="./components/routines.js"></script>
 <script type="module" src="./server connections/routines.js"></script>
+<script type="module" src="./components/exerciseSelector.js"></script>
+<script type="module" src="./components/displayExercises.js"></script>
 
 </html>

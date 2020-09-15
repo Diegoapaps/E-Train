@@ -25,11 +25,20 @@ deleteNewTraining.addEventListener('click', () => {
 });
 
 // add excercise to fast train
+import { displayAllExcercises } from './displayExercises.js';
+const url = `http://localhost:3000/tracker/excercises`;
+const exerciseListContainer = document.querySelector('.select-exercise');
+const exerciseList = document.querySelector('.exercise-select-list');
 const addFastTrainExcerciseBtn = document.querySelector('#add-fast-train-excercise');
+const isBtn = true;
 
+// show the exercise selector
 addFastTrainExcerciseBtn.addEventListener('click', () => {
+    displayAllExcercises(exerciseList, url, isBtn, excerciseContainer);
+    showModal(exerciseListContainer);
     addFastTrainExcercise(excerciseContainer);
 });
+
 
 function addFastTrainExcercise(container) {
     const div = document.createElement('div');

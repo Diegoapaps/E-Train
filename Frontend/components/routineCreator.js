@@ -26,10 +26,17 @@ function closeModal(modal) {
 }
 
 // Add modal excercise
+import { displayAllExcercises } from './displayExercises.js';
+const url = `http://localhost:3000/tracker/excercises`;
+const exerciseListContainer = document.querySelector('.select-exercise');
+const exerciseList = document.querySelector('.exercise-select-list');
+const isBtn = true;
 const excerciseContainer = document.querySelector('.modal-excercises');
 const addModalExcerciseBtn = document.querySelector('#add-excercise-routine-creator');
 
 addModalExcerciseBtn.addEventListener('click', () => {
+    displayAllExcercises(exerciseList, url, isBtn, excerciseContainer);
+    showModal(exerciseListContainer);
     addModalExcercise(excerciseContainer);
 });
 
