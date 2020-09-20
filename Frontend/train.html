@@ -108,12 +108,25 @@
 
             <div class="open-routine">
                 <div class="routine-train-headers">
-                    <h3 id="routine-title">Nombre de la Rutina</h3>
+                    <h2 id="routine-title">Nombre de la Rutina</h2>
                     <button id="routine-train-cancel" class="cancel-btn">Cancelar</button>
                 </div>
-                <div class="fast-train-excercises"></div>
+                <div class="routine-trainer-exercises"></div>
                 <div class="routine-train-btns">
-                    <button class="button-blue-width-style">Terminar entrenamiento</button>
+                    <button id="end-routine-training" class="button-blue-width-style">Terminar entrenamiento</button>
+                </div>
+            </div>
+
+            <div class="edit-routine">
+                <div class="routine-edit-headers">
+                    <form>
+                        <input id="input-title-routine" type="text">
+                    </form>
+                    <button id="routine-edit-cancel" class="cancel-btn">Cancelar</button>
+                </div>
+                <div class="routine-edit-exercises"></div>
+                <div class="routine-edit-btns">
+                    <button id="edit-routine-training" class="button-blue-width-style">Editar Rutina</button>
                 </div>
             </div>
 
@@ -152,5 +165,6 @@
 <script type="module" src="./server connections/routines.js"></script>
 <script type="module" src="./components/exerciseSelector.js"></script>
 <script type="module" src="./components/displayExercises.js"></script>
+<script type="module" src="./components/editRoutines.js"></script>
 
 </html>

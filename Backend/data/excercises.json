@@ -20,5 +20,11 @@
             "Glúteos",
             "Quads"
         ]
+    },
+    {
+        "name": "Press Militar",
+        "muscles": [
+            "Hombros"
+        ]
     }
 ]

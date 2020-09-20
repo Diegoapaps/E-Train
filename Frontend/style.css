@@ -277,6 +277,7 @@ header a:hover {
     margin-left: auto;
     text-align: center;
     margin-top: 50px;
+    color: white;
 }
 
 .set-container span {
@@ -409,6 +410,11 @@ header a:hover {
     margin-bottom: 30px;
 }
 
+.fast-train-excercises-grid {
+    margin-top: 30px;
+    color: rebeccapurple;
+}
+
 .fast-train-component h4, .modal-excercises h4 {
     text-align: center;
     color: white;
@@ -511,7 +517,7 @@ header a:hover {
     margin-top: 30px;
 }
 
-.routines-modal, .fast-train-component, .open-routine, .select-exercise {
+.routines-modal, .fast-train-component, .open-routine, .select-exercise, .edit-routine {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -530,7 +536,7 @@ header a:hover {
 /* Rutinas */
 .routine-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -627,6 +633,57 @@ header a:hover {
     display: flex;
     margin-bottom: 20px;
 }
+
+/* Routine Trainer */
+.routine-train-headers {
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* edit routines */
+.routine-display-headers {
+    display: flex;
+}
+
+.edit-btn {
+    background-color: teal;
+    color: white;
+    top: 0px;
+    left: 0;
+    position: absolute;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 10px;
+}
+
+.edit-btn:hover {
+    background-color: lightseagreen;
+    cursor: pointer;
+}
+
+.routine-display-container {
+    position: relative;
+}
+
+.routine-edit-headers {
+    display: flex;
+    color: white;
+}
+
+.edit-routine input[type= "text"] {
+    background-color: #353535;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.3rem;
+    outline: none;
+}
+
+#input-title-routine {
+    background-color: lightseagreen;
+}
+
 
 
 /* Media Queries */
