@@ -684,6 +684,11 @@ header a:hover {
     background-color: lightseagreen;
 }
 
+#delete-routine {
+    padding: 10px;
+    margin-left: 15%;
+}
+
 
 
 /* Media Queries */

@@ -97,11 +97,28 @@ function updateRoutineServer(id, obj) {
         });
 }
 
+// fetch function for deleting a routine
+function deleteRoutine(id) {
+    fetch(`${url}/${id}`, {
+        method: 'DELETE'
+    })
+        .then(response => {
+            return response.json();
+        })
+        .then(json => {
+            console.log(json);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+}
+
 export {
     createRoutineServer,
     getAllRoutines,
     createData,
     returnData,
     getRoutine,
-    updateRoutineServer
+    updateRoutineServer,
+    deleteRoutine
 };
