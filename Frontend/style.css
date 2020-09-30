@@ -689,6 +689,34 @@ header a:hover {
     margin-left: 15%;
 }
 
+/* workouts */
+.workout-container {
+    margin-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.workout-block {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.workout-block h3, .workout-block h4 {
+    color: black;
+}
+
+.workout-block p {
+    color: darkslategray;
+    font-weight: bold;
+}
+
+.workout-block-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 
 /* Media Queries */

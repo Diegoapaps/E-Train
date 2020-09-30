@@ -12,7 +12,7 @@ exports.getExcercise = asyncHandler(async (req, res, next) => {
     const excercise = await Excercise.findById(req.params.id);
 
     if (!excercise) {
-        return next(new ErrorResponse(`Rutina no encontrada con id de ${req.params.id}`, 404));
+        return next(new ErrorResponse(`Ejercicio no encontrado con id de ${req.params.id}`, 404));
     }
 
     res.status(200).json({ succes: true, data: excercise });
@@ -34,7 +34,7 @@ exports.updateExcercise = asyncHandler(async (req, res, next) => {
     });
 
     if (!excercise) {
-        return next(new ErrorResponse(`Rutina no encontrada con id de ${req.params.id}`, 404));
+        return next(new ErrorResponse(`Ejercicio no encontrado con id de ${req.params.id}`, 404));
     }
 
     res.status(200).json({ succes: true, data: excercise });

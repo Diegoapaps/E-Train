@@ -2,6 +2,7 @@ import { closeModal, hideTrainingComponent, showModal } from './routineCreator.j
 import { returnData, getRoutine } from '../server connections/routines.js';
 import { displayRoutine } from './openRoutine.js';
 import { updateRoutineServer, deleteRoutine } from '../server connections/routines.js';
+import { createExercisesForServer } from './createWorkout.js';
 
 // get names and ids
 const data = returnData();
@@ -40,35 +41,11 @@ function editTraining(container, modal, id) {
     const nameInput = modal.firstChild.nextSibling.firstChild.nextSibling.firstChild.nextSibling.value;
     obj.name = nameInput;
 
-    const serverExercises = getEditComponents(container);
+    const serverExercises = createExercisesForServer(container);
     obj.excercises = JSON.stringify(serverExercises);
 
     updateRoutineServer(id, obj);
     setTimeout(() => window.location.reload(), 2000);
-}
-
-// create updated routine for server
-function getEditComponents(container) {
-    const serverExcercises = [];
-    const excerciseContainers = Array.from(container.childNodes);
-    excerciseContainers.forEach(cont => {
-        const items = Array.from(cont.childNodes);
-        const excercise = {};
-        excercise.name = items[0].value;
-        items.forEach(item => {
-            if (item.className !== 'set-container-header' && item.previousSibling && item.nextSibling) {
-                const elements = Array.from(item.childNodes);
-                const set = `Set ${elements[0].textContent}`;
-                excercise[set] = {
-                    anterior: elements[1].textContent,
-                    kg: elements[2].value,
-                    reps: elements[3].value
-                };
-            }
-        });
-        serverExcercises.push(excercise);
-    });
-    return serverExcercises;
 }
 
 // confirm elimination of routine

@@ -2,6 +2,7 @@
 import { closeModal, hideTrainingComponent, showModal } from './routineCreator.js';
 import { openRoutine } from './openRoutine.js';
 import { editRoutine, editTraining } from './editRoutines.js';
+import { createExercisesForServer } from './createWorkout.js';
 
 // Containers
 const createRoutineBtn = document.querySelector('#create-routine-btn-modal');
@@ -25,25 +26,9 @@ class Routine {
 // create a routine
 function createRoutine(input, modalClosed, componentClosed) {
     // Create excercises for routine in the server
-    const serverExcercises = [];
+    const serverExcercises = createExercisesForServer(componentClosed);
+
     const excerciseContainers = Array.from(componentClosed.childNodes);
-    excerciseContainers.forEach(cont => {
-        const items = Array.from(cont.childNodes);
-        const excercise = {};
-        excercise.name = items[0].innerHTML;
-        items.forEach(item => {
-            if (item.className !== 'set-container-header' && item.previousSibling) {
-                const elements = Array.from(item.childNodes);
-                const set = `Set ${elements[0].innerHTML}`;
-                excercise[set] = {
-                    anterior: elements[1].innerHTML,
-                    kg: elements[2].value,
-                    reps: elements[3].value
-                };
-            }
-        });
-        serverExcercises.push(excercise);
-    });
 
     // create object for displaying routine excercises
     const excerciseObjects = [];

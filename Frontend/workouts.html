@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>excercises</title>
+    <title>Historial</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -38,39 +38,20 @@
             </ul>
         </div>
     </header>
-</body>
 
-<main>
-    <div class="user-navbar">
-        <a href="./train.html">Entrenar</a>
-        <a href="./excercises.html" class="current">Ejercicios</a>
-        <a href="./workouts.html">Historial</a>
-    </div>
-
-    <div class="exercises">
-        <div class="search">
-            <h2>Ejercicios</h2>
-            <form>
-                <input id="search-exercise" type="text" placeholder="Buscar...">
-            </form>
-            <select id="select-exercise">
-                <option selected>Todos</option>
-                <option>Pecho</option>
-                <option>Espalda</option>
-                <option>Bíceps</option>
-                <option>Tríceps</option>
-                <option>Hombro</option>
-                <option>Abs</option>
-                <option>Glúteos</option>
-                <option>Quads</option>
-                <option>Pantorrilla</option>
-                <option>Femoral</option>
-            </select>
+    <main>
+        <div class="user-navbar">
+            <a href="./train.html">Entrenar</a>
+            <a href="./excercises.html">Ejercicios</a>
+            <a href="./workouts.html" class="current">Historial</a>
         </div>
-        <div class="exercise-list"></div>
-    </div>
-</main>
+
+        <div class="workout-container">
+
+        </div>
+    </main>
+</body>
 <script type="module" src="./app.js"></script>
-<script type="module" src="./components/exercises.js"></script>
+<script type="module" src="./components/workouts.js"></script>
 
 </html>
