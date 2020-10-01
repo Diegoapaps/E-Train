@@ -718,6 +718,9 @@ header a:hover {
     grid-template-columns: 1fr 1fr;
 }
 
+.dlt-workout-btn {
+    display: flex;
+}
 
 /* Media Queries */
 @media (min-width: 600px) {
